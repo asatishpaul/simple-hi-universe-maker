@@ -1,5 +1,5 @@
 # Multi-stage build for React/Vite application
-FROM node:18-alpine as builder
+FROM node:18-alpine AS builder
 
 # Set working directory
 WORKDIR /app
@@ -7,8 +7,8 @@ WORKDIR /app
 # Copy package.json and package-lock.json (if available)
 COPY package*.json ./
 
-# Install dependencies
-RUN npm ci --only=production
+# Install ALL dependencies (including dev dependencies needed for build)
+RUN npm ci
 
 # Copy source code
 COPY . .
