@@ -7,18 +7,18 @@ import { Slider } from "@/components/ui/slider";
 import { Button } from "@/components/ui/button";
 
 export const LoanCalculator = () => {
-  const [loanAmount, setLoanAmount] = useState([25000]);
+  const [loanAmount, setLoanAmount] = useState([500000]);
   const [term, setTerm] = useState([36]);
   const [creditScore, setCreditScore] = useState("excellent");
 
   const getEstimatedRate = () => {
     const rates = {
-      excellent: 5.99,
-      good: 8.99,
-      fair: 12.99,
-      poor: 18.99
+      excellent: 10.49,
+      good: 12.99,
+      fair: 15.99,
+      poor: 19.99
     };
-    return rates[creditScore as keyof typeof rates] || 8.99;
+    return rates[creditScore as keyof typeof rates] || 12.99;
   };
 
   const calculatePayment = () => {
@@ -62,15 +62,15 @@ export const LoanCalculator = () => {
                       <Slider
                         value={loanAmount}
                         onValueChange={setLoanAmount}
-                        max={100000}
-                        min={1000}
-                        step={1000}
+                        max={5000000}
+                        min={50000}
+                        step={50000}
                         className="w-full"
                       />
                       <div className="flex justify-between text-sm text-muted-foreground mt-1">
-                        <span>$1,000</span>
-                        <span className="font-medium">${loanAmount[0].toLocaleString()}</span>
-                        <span>$100,000</span>
+                        <span>₹50,000</span>
+                        <span className="font-medium">₹{loanAmount[0].toLocaleString('en-IN')}</span>
+                        <span>₹50,00,000</span>
                       </div>
                     </div>
                   </div>
@@ -102,10 +102,10 @@ export const LoanCalculator = () => {
                       onChange={(e) => setCreditScore(e.target.value)}
                       className="w-full mt-2 p-3 border border-input rounded-md bg-background"
                     >
-                      <option value="excellent">Excellent (720+)</option>
-                      <option value="good">Good (660-719)</option>
-                      <option value="fair">Fair (580-659)</option>
-                      <option value="poor">Poor (Below 580)</option>
+                      <option value="excellent">Excellent (750+)</option>
+                      <option value="good">Good (700-749)</option>
+                      <option value="fair">Fair (650-699)</option>
+                      <option value="poor">Poor (Below 650)</option>
                     </select>
                   </div>
                 </div>
@@ -114,13 +114,13 @@ export const LoanCalculator = () => {
                   <h3 className="text-2xl font-bold text-center mb-6">Your Estimated Payment</h3>
                   <div className="text-center space-y-4">
                     <div className="text-4xl font-bold text-primary">
-                      ${calculatePayment().toFixed(2)}
+                      ₹{calculatePayment().toFixed(0)}
                       <span className="text-lg text-muted-foreground">/month</span>
                     </div>
                     <div className="text-sm text-muted-foreground space-y-1">
                       <div>Estimated APR: {getEstimatedRate()}%</div>
-                      <div>Total Interest: ${((calculatePayment() * term[0]) - loanAmount[0]).toFixed(2)}</div>
-                      <div>Total Amount: ${(calculatePayment() * term[0]).toFixed(2)}</div>
+                      <div>Total Interest: ₹{((calculatePayment() * term[0]) - loanAmount[0]).toFixed(0)}</div>
+                      <div>Total Amount: ₹{(calculatePayment() * term[0]).toFixed(0)}</div>
                     </div>
                   </div>
                   

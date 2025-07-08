@@ -6,22 +6,22 @@ export const Features = () => {
     {
       icon: DollarSign,
       title: "Competitive Rates",
-      description: "Starting as low as 5.99% APR for qualified borrowers"
+      description: "Starting as low as 10.49% APR from our partner banks including HDFC, ICICI, Axis & IDFC"
     },
     {
       icon: Zap,
       title: "Fast Approval",
-      description: "Get approved in as little as 5 minutes with instant decisions"
+      description: "Get approved in as little as 5 minutes with instant decisions from leading banks"
     },
     {
       icon: Users,
       title: "Trusted Network",
-      description: "Connected with 50+ verified lenders nationwide"
+      description: "Connected with HDFC, ICICI, Axis, IDFC and 50+ other verified NBFCs nationwide"
     },
     {
       icon: CheckCircle,
       title: "No Hidden Fees",
-      description: "Transparent pricing with no origination or prepayment fees"
+      description: "Transparent pricing with no origination or prepayment fees from our banking partners"
     }
   ];
 
@@ -33,7 +33,7 @@ export const Features = () => {
             Why Choose Our Loan Service?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We make getting a personal loan simple, fast, and transparent
+            We connect you with India's leading banks and NBFCs for the best personal loan deals
           </p>
         </div>
         

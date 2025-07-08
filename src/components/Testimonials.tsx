@@ -1,28 +1,55 @@
 
+import { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Star } from "lucide-react";
+import { Star, Plus } from "lucide-react";
+import { TestimonialForm } from "./TestimonialForm";
+import { Button } from "@/components/ui/button";
 
 export const Testimonials = () => {
-  const testimonials = [
+  const [showForm, setShowForm] = useState(false);
+  const [testimonials, setTestimonials] = useState([
     {
-      name: "Sarah Johnson",
+      id: 1,
+      name: "Rajesh Kumar",
       rating: 5,
-      text: "Got approved for $20,000 in just 10 minutes! The process was incredibly smooth and the rate was better than my bank offered.",
-      location: "Austin, TX"
+      text: "Got approved for ₹10,00,000 from HDFC Bank in just 15 minutes! The process was incredibly smooth and the rate was better than what I expected.",
+      location: "Bangalore, KA"
     },
     {
-      name: "Mike Chen",
+      id: 2,
+      name: "Priya Sharma",
       rating: 5,
-      text: "Used the loan to consolidate my credit cards. Saved over $300/month on payments. Highly recommend this service!",
-      location: "San Francisco, CA"
+      text: "Used the loan from ICICI to consolidate my credit cards. Saved over ₹15,000/month on payments through their competitive rates!",
+      location: "Mumbai, MH"
     },
     {
-      name: "Lisa Rodriguez",
+      id: 3,
+      name: "Amit Patel",
       rating: 5,
-      text: "Fast, transparent, and no hidden fees. Exactly what they promised. Funded my home renovation project perfectly.",
-      location: "Miami, FL"
+      text: "Fast, transparent, and no hidden fees. Got connected with Axis Bank and funded my business expansion perfectly. Highly recommend!",
+      location: "Ahmedabad, GJ"
     }
-  ];
+  ]);
+
+  // Load testimonials from localStorage on component mount
+  useEffect(() => {
+    const savedTestimonials = localStorage.getItem('userTestimonials');
+    if (savedTestimonials) {
+      const parsed = JSON.parse(savedTestimonials);
+      setTestimonials(prev => [...prev, ...parsed]);
+    }
+  }, []);
+
+  const addTestimonial = (newTestimonial: any) => {
+    setTestimonials(prev => {
+      const updated = [newTestimonial, ...prev];
+      // Save user testimonials to localStorage (excluding default ones)
+      const userTestimonials = updated.filter(t => t.id > 3);
+      localStorage.setItem('userTestimonials', JSON.stringify(userTestimonials));
+      return updated;
+    });
+    setShowForm(false);
+  };
 
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
@@ -41,13 +68,16 @@ export const Testimonials = () => {
             What Our Customers Say
           </h2>
           <p className="text-lg text-muted-foreground">
-            Join thousands of satisfied customers who found their perfect loan
+            Join thousands of satisfied customers who found their perfect loan through our partner banks
+          </p>
+          <p className="text-sm text-muted-foreground mt-2">
+            We work with HDFC Bank, ICICI Bank, Axis Bank, IDFC First Bank & other leading NBFCs
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <Card key={index} className="h-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-8">
+          {testimonials.slice(0, 6).map((testimonial, index) => (
+            <Card key={testimonial.id} className="h-full">
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
                   {renderStars(testimonial.rating)}
@@ -58,10 +88,30 @@ export const Testimonials = () => {
                 <div>
                   <div className="font-semibold">{testimonial.name}</div>
                   <div className="text-sm text-muted-foreground">{testimonial.location}</div>
+                  {testimonial.id > 3 && (
+                    <div className="text-xs text-primary mt-1">✓ Recent Review</div>
+                  )}
                 </div>
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        <div className="text-center">
+          {!showForm ? (
+            <Button 
+              onClick={() => setShowForm(true)}
+              className="mb-8"
+              variant="outline"
+            >
+              <Plus className="mr-2 h-4 w-4" />
+              Share Your Experience
+            </Button>
+          ) : (
+            <div className="flex justify-center mb-8">
+              <TestimonialForm onAddTestimonial={addTestimonial} />
+            </div>
+          )}
         </div>
       </div>
     </section>

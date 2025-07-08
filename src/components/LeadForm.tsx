@@ -16,7 +16,7 @@ export const LeadForm = () => {
     email: "",
     phone: "",
     zipCode: "",
-    annualIncome: "",
+    monthlyNetSalary: "",
     employmentStatus: "",
     creditScore: ""
   });
@@ -31,7 +31,7 @@ export const LeadForm = () => {
     
     toast({
       title: "Application Submitted!",
-      description: "We'll contact you within 24 hours with your loan options.",
+      description: "We'll connect you with our partner banks (HDFC, ICICI, Axis, IDFC) within 24 hours.",
     });
     
     // Reset form
@@ -43,7 +43,7 @@ export const LeadForm = () => {
       email: "",
       phone: "",
       zipCode: "",
-      annualIncome: "",
+      monthlyNetSalary: "",
       employmentStatus: "",
       creditScore: ""
     });
@@ -62,7 +62,7 @@ export const LeadForm = () => {
               Get Your Personal Loan Quote
             </h2>
             <p className="text-lg text-muted-foreground">
-              Fill out the form below and get matched with the best loan offers
+              Fill out the form below and get matched with the best loan offers from HDFC, ICICI, Axis, IDFC & other NBFCs
             </p>
           </div>
           
@@ -74,11 +74,11 @@ export const LeadForm = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="loan-amount">Loan Amount Needed</Label>
+                    <Label htmlFor="loan-amount">Loan Amount Needed (₹)</Label>
                     <Input
                       id="loan-amount"
                       type="number"
-                      placeholder="e.g., 25000"
+                      placeholder="e.g., 500000"
                       value={formData.loanAmount}
                       onChange={(e) => handleChange("loanAmount", e.target.value)}
                       required
@@ -99,6 +99,9 @@ export const LeadForm = () => {
                       <option value="home-improvement">Home Improvement</option>
                       <option value="major-purchase">Major Purchase</option>
                       <option value="medical">Medical Expenses</option>
+                      <option value="education">Education</option>
+                      <option value="travel">Travel</option>
+                      <option value="wedding">Wedding</option>
                       <option value="other">Other</option>
                     </select>
                   </div>
@@ -152,7 +155,7 @@ export const LeadForm = () => {
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="zip-code">ZIP Code</Label>
+                    <Label htmlFor="zip-code">PIN Code</Label>
                     <Input
                       id="zip-code"
                       value={formData.zipCode}
@@ -162,13 +165,13 @@ export const LeadForm = () => {
                   </div>
                   
                   <div>
-                    <Label htmlFor="annual-income">Annual Income</Label>
+                    <Label htmlFor="monthly-net-salary">Monthly Net Salary (₹)</Label>
                     <Input
-                      id="annual-income"
+                      id="monthly-net-salary"
                       type="number"
-                      placeholder="e.g., 50000"
-                      value={formData.annualIncome}
-                      onChange={(e) => handleChange("annualIncome", e.target.value)}
+                      placeholder="e.g., 75000"
+                      value={formData.monthlyNetSalary}
+                      onChange={(e) => handleChange("monthlyNetSalary", e.target.value)}
                       required
                     />
                   </div>
@@ -182,16 +185,16 @@ export const LeadForm = () => {
                     className="mt-2"
                   >
                     <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="employed" id="employed" />
-                      <Label htmlFor="employed">Employed Full-time</Label>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="part-time" id="part-time" />
-                      <Label htmlFor="part-time">Employed Part-time</Label>
+                      <RadioGroupItem value="salaried" id="salaried" />
+                      <Label htmlFor="salaried">Salaried</Label>
                     </div>
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="self-employed" id="self-employed" />
                       <Label htmlFor="self-employed">Self-employed</Label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="business-owner" id="business-owner" />
+                      <Label htmlFor="business-owner">Business Owner</Label>
                     </div>
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="retired" id="retired" />
@@ -210,10 +213,10 @@ export const LeadForm = () => {
                     required
                   >
                     <option value="">Select range</option>
-                    <option value="excellent">Excellent (720+)</option>
-                    <option value="good">Good (660-719)</option>
-                    <option value="fair">Fair (580-659)</option>
-                    <option value="poor">Poor (Below 580)</option>
+                    <option value="excellent">Excellent (750+)</option>
+                    <option value="good">Good (700-749)</option>
+                    <option value="fair">Fair (650-699)</option>
+                    <option value="poor">Poor (Below 650)</option>
                     <option value="unknown">I don't know</option>
                   </select>
                 </div>
@@ -223,7 +226,7 @@ export const LeadForm = () => {
                 </Button>
                 
                 <p className="text-xs text-muted-foreground text-center">
-                  By submitting this form, you agree to receive calls and texts from our lending partners. 
+                  By submitting this form, you agree to receive calls and texts from our lending partners including HDFC Bank, ICICI Bank, Axis Bank, IDFC First Bank and other NBFCs. 
                   Your information is secure and will not be sold to third parties.
                 </p>
               </form>
