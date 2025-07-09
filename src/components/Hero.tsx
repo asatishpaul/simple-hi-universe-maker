@@ -18,7 +18,7 @@ export const Hero = () => {
           
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             We guide you through the entire loan process without spam calls. 
-            Find the best rates from HDFC, ICICI, Axis, IDFC & other trusted NBFCs.
+            Find the best rates from HDFC Bank, ICICI Bank, Axis Bank, IDFC First Bank & other trusted NBFCs.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

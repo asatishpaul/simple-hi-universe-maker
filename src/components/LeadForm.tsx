@@ -31,7 +31,7 @@ export const LeadForm = () => {
     
     toast({
       title: "Application Submitted!",
-      description: "We'll connect you with our partner banks (HDFC, ICICI, Axis, IDFC) within 24 hours.",
+      description: "We'll connect you with our partner banks (HDFC Bank, ICICI Bank, Axis Bank, IDFC First Bank) within 24 hours.",
     });
     
     // Reset form
@@ -62,7 +62,7 @@ export const LeadForm = () => {
               Get Your Personal Loan Quote
             </h2>
             <p className="text-lg text-muted-foreground">
-              Fill out the form below and get matched with the best loan offers from HDFC, ICICI, Axis, IDFC & other NBFCs
+              Fill out the form below and get matched with the best loan offers from HDFC Bank, ICICI Bank, Axis Bank, IDFC First Bank & other NBFCs
             </p>
           </div>
           
@@ -188,18 +188,22 @@ export const LeadForm = () => {
                       <RadioGroupItem value="salaried" id="salaried" />
                       <Label htmlFor="salaried">Salaried</Label>
                     </div>
-                    <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="self-employed" id="self-employed" />
-                      <Label htmlFor="self-employed">Self-employed</Label>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="business-owner" id="business-owner" />
-                      <Label htmlFor="business-owner">Business Owner</Label>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="retired" id="retired" />
-                      <Label htmlFor="retired">Retired</Label>
-                    </div>
+                     <div className="flex items-center space-x-2">
+                       <RadioGroupItem value="self-employed" id="self-employed" />
+                       <Label htmlFor="self-employed">Self-employed</Label>
+                     </div>
+                     <div className="flex items-center space-x-2">
+                       <RadioGroupItem value="business-owner" id="business-owner" />
+                       <Label htmlFor="business-owner">Business Owner</Label>
+                     </div>
+                     <div className="flex items-center space-x-2">
+                       <RadioGroupItem value="retired" id="retired" />
+                       <Label htmlFor="retired">Retired</Label>
+                     </div>
+                     <div className="flex items-center space-x-2">
+                       <RadioGroupItem value="professional" id="professional" />
+                       <Label htmlFor="professional">Other Professionals (Doctor, Architect, etc.)</Label>
+                     </div>
                   </RadioGroup>
                 </div>
                 

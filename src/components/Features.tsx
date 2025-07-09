@@ -16,12 +16,12 @@ export const Features = () => {
     {
       icon: DollarSign,
       title: "Lowest Interest Rates",
-      description: "Starting at 10.49% APR from HDFC, ICICI, Axis, IDFC & other top NBFCs based on your profile"
+      description: "Starting at 10.49% APR from HDFC Bank, ICICI Bank, Axis Bank, IDFC First Bank & other top NBFCs based on your profile"
     },
     {
       icon: Users,
       title: "Trusted Partners",
-      description: "Direct partnerships with HDFC, ICICI, Axis, IDFC and 50+ verified NBFCs for best offers"
+      description: "Direct partnerships with HDFC Bank, ICICI Bank, Axis Bank, IDFC First Bank and 50+ verified NBFCs for best offers"
     },
     {
       icon: Zap,
@@ -43,7 +43,7 @@ export const Features = () => {
             Why Choose Our Loan Service?
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Our spam-free approach ensures you get expert guidance to find the lowest interest rates from the right bank for your profile - including HDFC, ICICI, Axis, IDFC & other trusted NBFCs
+            Our spam-free approach ensures you get expert guidance to find the lowest interest rates from the right bank for your profile - including HDFC Bank, ICICI Bank, Axis Bank, IDFC First Bank & other trusted NBFCs
           </p>
         </div>
         
