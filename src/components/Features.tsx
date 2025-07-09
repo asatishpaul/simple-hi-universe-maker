@@ -1,27 +1,37 @@
 
-import { CheckCircle, DollarSign, Users, Zap } from "lucide-react";
+import { CheckCircle, DollarSign, Users, Zap, PhoneOff, UserCheck } from "lucide-react";
 
 export const Features = () => {
   const features = [
     {
-      icon: DollarSign,
-      title: "Competitive Rates",
-      description: "Starting as low as 10.49% APR from our partner banks including HDFC, ICICI, Axis & IDFC"
+      icon: PhoneOff,
+      title: "100% Spam-Free",
+      description: "No repeated calls or harassment. We respect your privacy and communicate only when necessary"
     },
     {
-      icon: Zap,
-      title: "Fast Approval",
-      description: "Get approved in as little as 5 minutes with instant decisions from leading banks"
+      icon: UserCheck,
+      title: "Expert Guidance",
+      description: "Our loan experts guide you through the entire process to find the best bank match for your profile"
+    },
+    {
+      icon: DollarSign,
+      title: "Lowest Interest Rates",
+      description: "Starting at 10.49% APR from HDFC, ICICI, Axis, IDFC & other top NBFCs based on your profile"
     },
     {
       icon: Users,
-      title: "Trusted Network",
-      description: "Connected with HDFC, ICICI, Axis, IDFC and 50+ other verified NBFCs nationwide"
+      title: "Trusted Partners",
+      description: "Direct partnerships with HDFC, ICICI, Axis, IDFC and 50+ verified NBFCs for best offers"
+    },
+    {
+      icon: Zap,
+      title: "Smart Matching",
+      description: "AI-powered analysis to match you with banks offering the lowest rates for your profile"
     },
     {
       icon: CheckCircle,
-      title: "No Hidden Fees",
-      description: "Transparent pricing with no origination or prepayment fees from our banking partners"
+      title: "Transparent Process",
+      description: "No hidden fees, clear terms, and honest guidance throughout your loan journey"
     }
   ];
 
@@ -32,12 +42,12 @@ export const Features = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Why Choose Our Loan Service?
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We connect you with India's leading banks and NBFCs for the best personal loan deals
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Our spam-free approach ensures you get expert guidance to find the lowest interest rates from the right bank for your profile - including HDFC, ICICI, Axis, IDFC & other trusted NBFCs
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div key={index} className="text-center p-6 rounded-lg border bg-card hover:shadow-lg transition-shadow">
               <feature.icon className="h-12 w-12 text-primary mx-auto mb-4" />

@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Calculator, Shield, Clock } from "lucide-react";
+import { Calculator, Shield, Clock, PhoneOff } from "lucide-react";
 
 export const Hero = () => {
   const scrollToForm = () => {
@@ -13,12 +13,12 @@ export const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
             Get Your Personal Loan
-            <span className="text-primary block">In Minutes, Not Days</span>
+            <span className="text-primary block">100% Spam-Free Process</span>
           </h1>
           
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Compare rates from top lenders. Quick approval process. 
-            Funds as fast as the next business day. No hidden fees.
+            We guide you through the entire loan process without spam calls. 
+            Find the best rates from HDFC, ICICI, Axis, IDFC & other trusted NBFCs.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -40,7 +40,15 @@ export const Hero = () => {
             </Button>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            <div className="flex items-center justify-center gap-3">
+              <PhoneOff className="h-8 w-8 text-primary" />
+              <div className="text-left">
+                <div className="font-semibold">No Spam Calls</div>
+                <div className="text-sm text-muted-foreground">Respectful communication</div>
+              </div>
+            </div>
+            
             <div className="flex items-center justify-center gap-3">
               <Shield className="h-8 w-8 text-primary" />
               <div className="text-left">
@@ -52,16 +60,16 @@ export const Hero = () => {
             <div className="flex items-center justify-center gap-3">
               <Clock className="h-8 w-8 text-primary" />
               <div className="text-left">
-                <div className="font-semibold">Quick Decision</div>
-                <div className="text-sm text-muted-foreground">Results in minutes</div>
+                <div className="font-semibold">Expert Guidance</div>
+                <div className="text-sm text-muted-foreground">Professional support</div>
               </div>
             </div>
             
             <div className="flex items-center justify-center gap-3">
               <Calculator className="h-8 w-8 text-primary" />
               <div className="text-left">
-                <div className="font-semibold">Smart Matching</div>
-                <div className="text-sm text-muted-foreground">Best rates for you</div>
+                <div className="font-semibold">Best Match</div>
+                <div className="text-sm text-muted-foreground">Lowest rates for you</div>
               </div>
             </div>
           </div>
