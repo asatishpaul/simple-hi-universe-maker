@@ -57,12 +57,12 @@ export const LeadForm = () => {
     <section id="lead-form" className="py-16 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-12">
+            <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Get Your Personal Loan Quote
+              💰 Get Instant Personal Loan Approval
             </h2>
             <p className="text-lg text-muted-foreground">
-              Fill out the form below and get matched with the best loan offers from HDFC Bank, ICICI Bank, Axis Bank, IDFC First Bank & other NBFCs
+              Quick & hassle-free process with competitive rates from top banks & NBFCs. Get approved in minutes!
             </p>
           </div>
           
@@ -189,10 +189,6 @@ export const LeadForm = () => {
                       <Label htmlFor="salaried">Salaried</Label>
                     </div>
                      <div className="flex items-center space-x-2">
-                       <RadioGroupItem value="self-employed" id="self-employed" />
-                       <Label htmlFor="self-employed">Self-employed</Label>
-                     </div>
-                     <div className="flex items-center space-x-2">
                        <RadioGroupItem value="retired" id="retired" />
                        <Label htmlFor="retired">Retired</Label>
                      </div>
@@ -203,23 +199,6 @@ export const LeadForm = () => {
                   </RadioGroup>
                 </div>
                 
-                <div>
-                  <Label htmlFor="credit-score-range">Credit Score Range</Label>
-                  <select
-                    id="credit-score-range"
-                    value={formData.creditScore}
-                    onChange={(e) => handleChange("creditScore", e.target.value)}
-                    className="w-full mt-2 p-2 border border-input rounded-md bg-background"
-                    required
-                  >
-                    <option value="">Select range</option>
-                    <option value="excellent">Excellent (750+)</option>
-                    <option value="good">Good (700-749)</option>
-                    <option value="fair">Fair (650-699)</option>
-                    <option value="poor">Poor (Below 650)</option>
-                    <option value="unknown">I don't know</option>
-                  </select>
-                </div>
                 
                 <Button type="submit" className="w-full" size="lg">
                   Get My Loan Offers
