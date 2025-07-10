@@ -193,10 +193,6 @@ export const LeadForm = () => {
                        <Label htmlFor="self-employed">Self-employed</Label>
                      </div>
                      <div className="flex items-center space-x-2">
-                       <RadioGroupItem value="business-owner" id="business-owner" />
-                       <Label htmlFor="business-owner">Business Owner</Label>
-                     </div>
-                     <div className="flex items-center space-x-2">
                        <RadioGroupItem value="retired" id="retired" />
                        <Label htmlFor="retired">Retired</Label>
                      </div>
