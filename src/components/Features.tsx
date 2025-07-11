@@ -36,25 +36,25 @@ export const Features = () => {
   ];
 
   return (
-    <section className="py-16 bg-background">
+    <section className="py-8 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Why Choose Our Loan Service?
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Our spam-free approach ensures you get expert guidance to find the lowest interest rates from the right bank for your profile - including HDFC Bank, ICICI Bank, Axis Bank, IDFC First Bank & other trusted NBFCs
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div key={index} className="text-center p-6 rounded-lg border bg-card hover:shadow-lg transition-shadow">
-              <feature.icon className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-muted-foreground">{feature.description}</p>
-            </div>
-          ))}
+        <div className="flex flex-wrap justify-center gap-4 text-sm">
+          <div className="flex items-center gap-2 bg-card rounded-full px-4 py-2 border">
+            <PhoneOff className="h-4 w-4 text-primary" />
+            <span>100% Spam-Free</span>
+          </div>
+          <div className="flex items-center gap-2 bg-card rounded-full px-4 py-2 border">
+            <UserCheck className="h-4 w-4 text-primary" />
+            <span>Expert Guidance</span>
+          </div>
+          <div className="flex items-center gap-2 bg-card rounded-full px-4 py-2 border">
+            <Zap className="h-4 w-4 text-primary" />
+            <span>Smart Matching</span>
+          </div>
+          <div className="flex items-center gap-2 bg-card rounded-full px-4 py-2 border">
+            <CheckCircle className="h-4 w-4 text-primary" />
+            <span>Transparent Process</span>
+          </div>
         </div>
       </div>
     </section>
