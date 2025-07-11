@@ -13,13 +13,35 @@ export const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
             Get Your Personal Loan
-            <span className="text-primary block">100% Spam-Free Process</span>
+            <span className="text-primary block">Starting at 10.49% APR*</span>
           </h1>
           
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            We guide you through the entire loan process without spam calls. 
-            Find the best rates from HDFC Bank, ICICI Bank, Axis Bank, IDFC First Bank & other trusted NBFCs.
+          <p className="text-xl text-muted-foreground mb-6 max-w-2xl mx-auto">
+            Quick approval with competitive rates from leading banks. 
+            Partner with HDFC Bank, ICICI Bank, Axis Bank, IDFC First Bank & other trusted NBFCs.
           </p>
+          
+          <div className="bg-gradient-to-r from-primary/10 to-secondary/10 p-6 rounded-lg mb-8 max-w-3xl mx-auto">
+            <h3 className="text-xl font-semibold text-foreground mb-3">Our Banking Partners Offer:</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+              <div>
+                <div className="text-2xl font-bold text-primary">10.49%</div>
+                <div className="text-sm text-muted-foreground">Starting APR</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-primary">₹50L</div>
+                <div className="text-sm text-muted-foreground">Max Loan</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-primary">24 hrs</div>
+                <div className="text-sm text-muted-foreground">Quick Approval</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-primary">7 Years</div>
+                <div className="text-sm text-muted-foreground">Max Tenure</div>
+              </div>
+            </div>
+          </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button 

@@ -119,35 +119,26 @@ export const LoanCalculator = () => {
                    </div>
                   
                    <div>
-                     <Label htmlFor="credit-score" className="text-base font-medium">
-                       Credit Score Range
+                     <Label htmlFor="interest-rate" className="text-base font-medium">
+                       Interest Rate (%)
                      </Label>
-                     <select
-                       id="credit-score"
-                       value={creditScore}
-                       onChange={(e) => setCreditScore(e.target.value)}
-                       className="w-full mt-2 p-3 border border-input rounded-md bg-background"
-                     >
-                       <option value="excellent">Excellent (750+) - 10.49%</option>
-                       <option value="good">Good (700-749) - 12.99%</option>
-                       <option value="fair">Fair (650-699) - 15.99%</option>
-                       <option value="poor">Poor (Below 650) - 19.99%</option>
-                     </select>
-                     
-                     <Label htmlFor="custom-rate" className="text-base font-medium mt-4 block">
-                       Or Enter Custom Interest Rate (%)
-                     </Label>
-                     <Input
-                       id="custom-rate"
-                       type="number"
-                       placeholder="Enter interest rate"
-                       value={customRate}
-                       onChange={(e) => setCustomRate(e.target.value)}
-                       min={8}
-                       max={30}
-                       step={0.01}
-                       className="mt-2 text-center font-medium"
-                     />
+                     <div className="mt-2 mb-4">
+                       <Input
+                         id="interest-rate"
+                         type="number"
+                         placeholder="Enter interest rate"
+                         value={customRate || "12.99"}
+                         onChange={(e) => setCustomRate(e.target.value)}
+                         min={8}
+                         max={30}
+                         step={0.01}
+                         className="text-center font-medium"
+                       />
+                       <div className="flex justify-between text-sm text-muted-foreground mt-2">
+                         <span>8% (Best Rate)</span>
+                         <span>30% (Max Rate)</span>
+                       </div>
+                     </div>
                    </div>
                 </div>
                 

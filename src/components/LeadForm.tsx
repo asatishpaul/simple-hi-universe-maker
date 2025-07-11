@@ -18,7 +18,8 @@ export const LeadForm = () => {
     zipCode: "",
     monthlyNetSalary: "",
     employmentStatus: "",
-    creditScore: ""
+    creditScore: "",
+    companyName: ""
   });
   
   const { toast } = useToast();
@@ -45,7 +46,8 @@ export const LeadForm = () => {
       zipCode: "",
       monthlyNetSalary: "",
       employmentStatus: "",
-      creditScore: ""
+      creditScore: "",
+      companyName: ""
     });
   };
 
@@ -175,6 +177,20 @@ export const LeadForm = () => {
                       required
                     />
                   </div>
+                </div>
+                
+                <div>
+                  <Label htmlFor="company-name">Company Name</Label>
+                  <Input
+                    id="company-name"
+                    placeholder="e.g., TCS, Infosys, HDFC Bank"
+                    value={formData.companyName || ""}
+                    onChange={(e) => handleChange("companyName", e.target.value)}
+                    required
+                  />
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-1 gap-4">
                 </div>
                 
                 <div>
