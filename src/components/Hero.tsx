@@ -12,25 +12,25 @@ export const Hero = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-            Get Your Personal Loan
-            <span className="text-primary block">Starting at 10.49% APR*</span>
+            Quick Personal Loans
+            <span className="text-primary block">From Trusted Banking Partners</span>
           </h1>
           
           <p className="text-xl text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Quick approval with competitive rates from leading banks. 
-            Partner with HDFC Bank, ICICI Bank, Axis Bank, IDFC First Bank & other trusted NBFCs.
+            Fast approval, competitive rates, and hassle-free process. 
+            Connect with HDFC Bank, ICICI Bank, Axis Bank, IDFC First Bank & other leading NBFCs.
           </p>
           
           <div className="bg-gradient-to-r from-primary/10 to-secondary/10 p-6 rounded-lg mb-8 max-w-3xl mx-auto">
-            <h3 className="text-xl font-semibold text-foreground mb-3">Our Banking Partners Offer:</h3>
+            <h3 className="text-xl font-semibold text-foreground mb-3">What We Offer:</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
               <div>
-                <div className="text-2xl font-bold text-primary">10.49%</div>
-                <div className="text-sm text-muted-foreground">Starting APR</div>
+                <div className="text-2xl font-bold text-primary">₹50K+</div>
+                <div className="text-sm text-muted-foreground">Min Loan Amount</div>
               </div>
               <div>
                 <div className="text-2xl font-bold text-primary">₹50L</div>
-                <div className="text-sm text-muted-foreground">Max Loan</div>
+                <div className="text-sm text-muted-foreground">Max Loan Amount</div>
               </div>
               <div>
                 <div className="text-2xl font-bold text-primary">24 hrs</div>
