@@ -62,37 +62,18 @@ export const Hero = () => {
             </Button>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            <div className="flex items-center justify-center gap-3">
-              <PhoneOff className="h-8 w-8 text-primary" />
-              <div className="text-left">
-                <div className="font-semibold">No Spam Calls</div>
-                <div className="text-sm text-muted-foreground">Respectful communication</div>
-              </div>
+          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2">
+              <Shield className="h-4 w-4 text-primary" />
+              <span>100% Secure</span>
             </div>
-            
-            <div className="flex items-center justify-center gap-3">
-              <Shield className="h-8 w-8 text-primary" />
-              <div className="text-left">
-                <div className="font-semibold">100% Secure</div>
-                <div className="text-sm text-muted-foreground">Bank-level encryption</div>
-              </div>
+            <div className="flex items-center gap-2">
+              <Clock className="h-4 w-4 text-primary" />
+              <span>Quick Process</span>
             </div>
-            
-            <div className="flex items-center justify-center gap-3">
-              <Clock className="h-8 w-8 text-primary" />
-              <div className="text-left">
-                <div className="font-semibold">Expert Guidance</div>
-                <div className="text-sm text-muted-foreground">Professional support</div>
-              </div>
-            </div>
-            
-            <div className="flex items-center justify-center gap-3">
-              <Calculator className="h-8 w-8 text-primary" />
-              <div className="text-left">
-                <div className="font-semibold">Best Match</div>
-                <div className="text-sm text-muted-foreground">Lowest rates for you</div>
-              </div>
+            <div className="flex items-center gap-2">
+              <PhoneOff className="h-4 w-4 text-primary" />
+              <span>No Spam Calls</span>
             </div>
           </div>
         </div>
