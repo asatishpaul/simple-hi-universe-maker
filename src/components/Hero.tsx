@@ -8,17 +8,16 @@ export const Hero = () => {
   };
 
   return (
-    <section className="bg-gradient-to-br from-primary/5 to-secondary/10 py-20">
+    <section className="bg-gradient-to-br from-primary/5 to-secondary/10 py-12">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+          <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
             Quick Personal Loans
-            <span className="text-primary block">From Trusted Banking Partners</span>
+            <span className="text-primary block">From Trusted Banks</span>
           </h1>
           
-          <p className="text-xl text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Fast approval, competitive rates, and hassle-free process. 
-            Connect with HDFC Bank, ICICI Bank, Axis Bank, IDFC First Bank & other leading NBFCs.
+          <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
+            Fast approval, competitive rates. Connect with leading banks & NBFCs.
           </p>
           
           <div className="bg-gradient-to-r from-primary/10 to-secondary/10 p-6 rounded-lg mb-8 max-w-4xl mx-auto">
