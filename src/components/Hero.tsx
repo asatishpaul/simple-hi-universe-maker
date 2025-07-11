@@ -21,9 +21,9 @@ export const Hero = () => {
             Connect with HDFC Bank, ICICI Bank, Axis Bank, IDFC First Bank & other leading NBFCs.
           </p>
           
-          <div className="bg-gradient-to-r from-primary/10 to-secondary/10 p-6 rounded-lg mb-8 max-w-3xl mx-auto">
-            <h3 className="text-xl font-semibold text-foreground mb-3">What We Offer:</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+          <div className="bg-gradient-to-r from-primary/10 to-secondary/10 p-6 rounded-lg mb-8 max-w-4xl mx-auto">
+            <h3 className="text-xl font-semibold text-foreground mb-4">What We Offer:</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mb-6">
               <div>
                 <div className="text-2xl font-bold text-primary">₹50K+</div>
                 <div className="text-sm text-muted-foreground">Min Loan Amount</div>
@@ -39,6 +39,21 @@ export const Hero = () => {
               <div>
                 <div className="text-2xl font-bold text-primary">7 Years</div>
                 <div className="text-sm text-muted-foreground">Max Tenure</div>
+              </div>
+            </div>
+            
+            <div className="flex flex-wrap justify-center gap-3 text-sm">
+              <div className="flex items-center gap-2 bg-background/50 rounded-full px-3 py-1 border">
+                <PhoneOff className="h-4 w-4 text-primary" />
+                <span>100% Spam-Free</span>
+              </div>
+              <div className="flex items-center gap-2 bg-background/50 rounded-full px-3 py-1 border">
+                <Shield className="h-4 w-4 text-primary" />
+                <span>100% Secure</span>
+              </div>
+              <div className="flex items-center gap-2 bg-background/50 rounded-full px-3 py-1 border">
+                <Clock className="h-4 w-4 text-primary" />
+                <span>Quick Process</span>
               </div>
             </div>
           </div>
@@ -62,20 +77,6 @@ export const Hero = () => {
             </Button>
           </div>
           
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <Shield className="h-4 w-4 text-primary" />
-              <span>100% Secure</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Clock className="h-4 w-4 text-primary" />
-              <span>Quick Process</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <PhoneOff className="h-4 w-4 text-primary" />
-              <span>No Spam Calls</span>
-            </div>
-          </div>
         </div>
       </div>
     </section>
