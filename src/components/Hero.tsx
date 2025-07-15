@@ -11,6 +11,20 @@ export const Hero = () => {
     <section className="bg-gradient-to-br from-primary/5 to-secondary/10 py-12">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
+          <div className="mb-6 text-center">
+            <p className="text-sm text-muted-foreground mb-2">Trusted by millions • Connected with</p>
+            <div className="flex flex-wrap justify-center items-center gap-3 text-sm font-medium text-foreground/70">
+              <span>HDFC Bank</span>
+              <span className="text-muted-foreground">•</span>
+              <span>ICICI Bank</span>
+              <span className="text-muted-foreground">•</span>
+              <span>Axis Bank</span>
+              <span className="text-muted-foreground">•</span>
+              <span>IDFC First Bank</span>
+              <span className="text-muted-foreground">•</span>
+              <span>& Other Trusted NBFCs</span>
+            </div>
+          </div>
           <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
             Quick Personal Loans
             <span className="text-primary block">From Trusted Banks</span>
