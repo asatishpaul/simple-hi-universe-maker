@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS submissions (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100),
+  email VARCHAR(150),
+  message TEXT,
+  submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
