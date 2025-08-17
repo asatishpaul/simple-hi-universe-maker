@@ -1,32 +1,20 @@
-# Multi-stage build for React/Vite application
-FROM node:18-alpine AS builder
+# Use Node.js LTS
+FROM node:18
 
 # Set working directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json (if available)
+# Copy package files
 COPY package*.json ./
 
-# Install ALL dependencies (including dev dependencies needed for build)
-RUN npm ci
+# Install dependencies
+RUN npm install
 
-# Copy source code
+# Copy app source
 COPY . .
 
-# Build the application
-RUN npm run build
+# Expose app port
+EXPOSE 3000
 
-# Production stage
-FROM nginx:alpine
-
-# Copy built assets from builder stage
-COPY --from=builder /app/dist /usr/share/nginx/html
-
-# Copy nginx configuration (optional - create if you need custom config)
-# COPY nginx.conf /etc/nginx/nginx.conf
-
-# Expose port 80
-EXPOSE 80
-
-# Start nginx
-CMD ["nginx", "-g", "daemon off;"]
+# Start app
+CMD ["npm", "start"]
